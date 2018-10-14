@@ -4,6 +4,13 @@
 	<display>English</display>
 
 	<resources>
+		<!-- Material Theme zusätzliche Übersetzung-->
+		<string name="ueber">About TWRP</string>
+		<string name="freiaktiverspeicher">Free active Space</string>
+		<string name="cputemperatur">CPU Temp.</string>
+		<string name="frei">Free</string>
+		<string name="aktuellervorgang">Current operation</string>
+		
 		<!-- Font overrides - only change these if your language requires special characters -->
 		<resource name="font_l" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
 		<resource name="font_m" type="fontoverride" filename="RobotoCondensed-Regular.ttf" scale="100" />
@@ -20,9 +27,9 @@
 		<string name="cache">Cache</string>
 		<string name="data">Data</string>
 		<string name="data_backup">Data (excl. storage)</string>
-		<string name="sdcard">SD card</string>
+		<string name="sdcard">SDCard</string>
 		<string name="internal">Internal Storage</string>
-		<string name="microsd">Micro SD card</string>
+		<string name="microsd">Micro SDCard</string>
 		<string name="usbotg">USB OTG</string>
 		<string name="android_secure">Android Secure</string>
 		<string name="dalvik">Dalvik / ART Cache</string>
@@ -116,13 +123,6 @@
 		<string name="rebooting">Rebooting...</string>
 		<string name="swipe_reboot">Swipe to Reboot</string>
 		<string name="swipe_reboot_s">   Reboot</string>
-		<string name="reboot_install_app_hdr">Install TWRP App?</string>
-		<string name="reboot_install_app1">Would you like to install the Official TWRP App?</string>
-		<string name="reboot_install_app2">The app can check for new TWRP versions.</string>
-		<string name="reboot_install_app_prompt_install">Prompt to install TWRP app if not installed</string>
-		<string name="reboot_install_app_system">Install as a System App</string>
-		<string name="reboot_installing_app">Installing App...</string>
-		<string name="swipe_to_install_app">Swipe to Install TWRP App</string>
 		<string name="swipe_flash">Swipe to confirm Flash</string>
 		<string name="confirm_action">Confirm Action</string>
 		<string name="back_cancel">Press back button to cancel.</string>
@@ -216,13 +216,8 @@
 		<string name="enc_disabled">disabled - set a password to enable</string>
 		<string name="enc_enabled">enabled</string>
 		<string name="enable_backup_comp_chk">Enable compression</string>
-		<string name="skip_digest_backup_chk" version="2">Skip Digest generation during backup</string>
-		<string name="disable_backup_space_chk" version="2">Disable free space check before backup</string>
-		<string name="current_boot_slot">Current Slot: %tw_active_slot%</string>
-		<string name="boot_slot_a">Slot A</string>
-		<string name="boot_slot_b">Slot B</string>
-		<string name="changing_boot_slot">Changing Boot Slot</string>
-		<string name="changing_boot_slot_complete">Changing Boot Slot Complete</string>
+		<string name="skip_md5_backup_chk">Skip MD5 generation during backup</string>
+		<string name="disable_backup_space_chk">Disable Free Space Check</string>
 		<string name="refresh_sizes_btn">Refresh Sizes</string>
 		<string name="swipe_backup">Swipe to Backup</string>
 		<string name="append_date_btn">Append Date</string>
@@ -254,7 +249,7 @@
 		<string name="restore_try_decrypt_s">Trying Decryption</string>
 		<string name="restore_backup_date">Backup made on %tw_restore_file_date%</string>
 		<string name="restore_sel_part">Select Partitions to Restore:</string>
-		<string name="restore_enable_digest_chk" version="2">Enable Digest Verification of Backup Files</string>
+		<string name="restore_enable_md5_chk">Enable MD5 Verification of Backup Files</string>
 		<string name="restore_complete">Restore Complete</string>
 		<string name="swipe_restore">Swipe to Restore</string>
 		<string name="swipe_restore_s">   Restore</string>
@@ -364,7 +359,7 @@
 		<string name="screen_to_slider">Screen timeout in seconds:</string>
 		<string name="screen_to_slider_s">Screen timeout in seconds (0=disabled): %tw_screen_timeout_secs%</string>
 		<string name="screen_to_na">Screen timeout setting unavailable</string>
-		<string name="screen_bright_slider">Brightness: %tw_brightness_pct%%</string>
+		<string name="screen_bright_slider">Screen Brightness: %tw_brightness_pct%%</string>
 		<string name="screen_bright_na">Brightness setting unavailable</string>
 		<string name="vibration_hdr">Vibration</string>
 		<string name="button_vibration_hdr">Button Vibration</string>
@@ -377,12 +372,12 @@
 		<string name="sel_lang_btn">Select Language</string>
 		<string name="set_language_btn">Set Language</string>
 		<string name="advanced_hdr">Advanced</string>
-		<string name="copy_log_confirm">Copy Log to SD card?</string>
-		<string name="copying_log" version="2">Copying Logs to SD card...</string>
-		<string name="copy_log_complete" version="2">Logs Copy Complete</string>
+		<string name="copy_log_confirm">Copy Log to SD Card?</string>
+		<string name="copying_log">Copying Log to SD Card...</string>
+		<string name="copy_log_complete">Log Copy Complete</string>
 		<string name="fix_context_btn">Fix Contexts</string>
-		<string name="part_sd_btn">Partition SD card</string>
-		<string name="part_sd_s_btn">SD card</string>
+		<string name="part_sd_btn">Partition SD Card</string>
+		<string name="part_sd_s_btn">SD Card</string>
 		<string name="file_manager_btn">File Manager</string>
 		<string name="language_hdr">Language</string>
 		<string name="terminal_btn">Terminal</string>
@@ -393,7 +388,7 @@
 		<string name="injecting_twrp">Re-Injecting TWRP...</string>
 		<string name="inject_twrp_complete">TWRP Injection Complete</string>
 		<string name="swipe_to_confirm">Swipe to Confirm</string>
-		<string name="part_sd_hdr">Partition SD card</string>
+		<string name="part_sd_hdr">Partition SD Card</string>
 		<string name="invalid_partsd_sel">You must select a removable device</string>
 		<string name="part_sd_lose">You will lose all files on your SD card!</string>
 		<string name="part_sd_undo">This action cannot be undone!</string>
@@ -404,7 +399,7 @@
 		<string name="file_system">File System:</string>
 		<string name="swipe_part_sd">Swipe to Partition</string>
 		<string name="swipe_part_sd_s">Partition</string>
-		<string name="partitioning_sd">Partitioning SD card...</string>
+		<string name="partitioning_sd">Partitioning SD Card...</string>
 		<string name="partitioning_sd2">This will take a few minutes.</string>
 		<string name="part_sd_complete">Partitioning Complete</string>
 		<string name="dumlock_hdr">HTC Dumlock</string>
@@ -455,7 +450,6 @@
 		<string name="decrypt_data_failed_pattern">Pattern failed, please try again!</string>
 		<string name="decrypt_data_enter_pattern">Enter Pattern.</string>
 		<string name="decrypt_data_trying">Trying Decryption</string>
-		<string name="decrypt_data_vold_os_missing">Missing files needed for vold decrypt: {1}</string>
 		<string name="term_hdr">Terminal Command</string>
 		<string name="term_s_hdr">Terminal</string>
 		<string name="term_kill_btn">KILL</string>
@@ -477,7 +471,14 @@
 		<string name="fixing_contexts">Fixing Contexts...</string>
 		<string name="fix_contexts_complete">Fix Contexts Complete</string>
 		<string name="reboot_hdr">Reboot</string>
-		<string name="install_cancel">Do Not Install</string>
+		<string name="su_hdr">SuperSU Check</string>
+		<string name="su_note1">Your device does not appear to be rooted.</string>
+		<string name="su_note2">Install SuperSU now?</string>
+		<string name="su_note3">This will root your device.</string>
+		<string name="su_cancel">Do Not Install</string>
+		<string name="swipe_su_to_install">Swipe to Install</string>
+		<string name="swipe_su_install">   Install</string>
+		<string name="su_installing">Installing SuperSU</string>
 		<string name="sel_storage_list">Select Storage</string>
 		<string name="ok_btn">OK</string>
 
@@ -489,12 +490,12 @@
 		<string name="mtp_crash">MTP Crashed, not starting MTP on boot.</string>
 		<string name="decrypt_success">Successfully decrypted with default password.</string>
 		<string name="unable_to_decrypt">Unable to decrypt with default password. You may need to perform a Format Data.</string>
-		<string name="generating_digest1" version="2">Generating Digest</string>
-		<!-- Message displayed during a backup if we are generating an Digest, ideally, leave the leading " * " to help align and separate this text from other console text -->
-		<string name="generating_digest2" version="2"> * Generating digest...</string>
-		<string name="digest_created" version="2"> * Digest Created.</string>
-		<string name="digest_error" version="2"> * Digest Error!</string>
-		<string name="digest_compute_error" version="2"> * Error computing Digest.</string>
+		<string name="generating_md51">Generating MD5</string>
+		<!-- Message displayed during a backup if we are generating an MD5, ideally, leave the leading " * " to help align and separate this text from other console text -->
+		<string name="generating_md52"> * Generating md5...</string>
+		<string name="md5_created"> * MD5 Created.</string>
+		<string name="md5_error"> * MD5 Error!</string>
+		<string name="md5_compute_error"> * Error computing MD5.</string>
 		<string name="current_date">(Current Date)</string>
 		<string name="auto_generate">(Auto Generate)</string>
 		<string name="unable_to_locate_partition">Unable to locate '{1}' partition for backup calculations.</string>
@@ -515,8 +516,8 @@
 		<string name="restore_folder">Restore folder: '{1}'</string>
 		<!-- {1} is the partition display name and {2} is the number of seconds -->
 		<string name="restore_part_done">[{1} done ({2} seconds)]</string>
-		<string name="verifying_digest" version="2">Verifying Digest</string>
-		<string name="skip_digest" version="2">Skipping Digest check based on user setting.</string>
+		<string name="verifying_md5">Verifying MD5</string>
+		<string name="skip_md5">Skipping MD5 check based on user setting.</string>
 		<string name="calc_restore">Calculating restore details...</string>
 		<string name="restore_read_only">Cannot restore {1} -- mounted read only.</string>
 		<string name="restore_unable_locate">Unable to locate '{1}' partition for restoring.</string>
@@ -543,9 +544,8 @@
 		<string name="fail_decrypt">Failed to decrypt data.</string>
 		<string name="no_crypto_support">No crypto support was compiled into this build.</string>
 		<string name="decrypt_success_dev">Data successfully decrypted, new block device: '{1}'</string>
-		<string name="decrypt_success_nodev">Data successfully decrypted</string>
 		<string name="done">Done.</string>
-		<string name="start_partition_sd">Partitioning SD card...</string>
+		<string name="start_partition_sd">Partitioning SD Card...</string>
 		<string name="partition_sd_locate">Unable to locate device to partition.</string>
 		<string name="ext_swap_size">EXT + Swap size is larger than sdcard size.</string>
 		<string name="remove_part_table">Removing partition table...</string>
@@ -579,9 +579,8 @@
 		<string name="cannot_resize">Cannot resize {1}.</string>
 		<string name="repair_resize">Repairing {1} before resizing.</string>
 		<string name="unable_resize">Unable to resize {1}.</string>
-		<string name="no_digest_found" version="2">No digest file found for '{1}'. Please unselect Enable Digest verification to restore.</string>
-		<string name="digest_fail_match" version="2">Digest failed to match on '{1}'.</string>
-		<string name="digest_matched" version="2">Digest matched for '{1}'.</string>
+		<string name="no_md5_found">No md5 file found for '{1}'. Please unselect Enable MD5 verification to restore.</string>
+		<string name="md5_fail_match">MD5 failed to match on '{1}'.</string>
 		<string name="fail_decrypt_tar">Failed to decrypt tar file '{1}'</string>
 		<string name="format_data_msg">You may need to reboot recovery to be able to use /data again.</string>
 		<string name="format_data_err">Unable to format to remove encryption.</string>
@@ -591,7 +590,6 @@
 		<string name="remove_all">Removing all files under '{1}'</string>
 		<string name="wiping_data">Wiping data without wiping /data/media ...</string>
 		<string name="backing_up">Backing up {1}...</string>
-		<string name="backup_storage_warning">Backups of {1} do not include any files in internal storage such as pictures or downloads.</string>
 		<string name="backing">Backing Up</string>
 		<string name="backup_size">Backup file size for '{1}' is 0 bytes.</string>
 		<string name="datamedia_fs_restore">WARNING: This /data backup was made with {1} file system! The backup may not boot unless you change back to {1}.</string>
@@ -603,7 +601,7 @@
 		<string name="backup_folder_set">Backup folder set to '{1}'</string>
 		<string name="locate_backup_err">Unable to locate backup '{1}'</string>
 		<string name="set_restore_opt">Setting restore options: '{1}':</string>
-		<string name="digest_check_skip" version="2">Digest check skip is on</string>
+		<string name="md5_check_skip">MD5 check skip is on</string>
 		<string name="ors_encrypt_restore_err">Unable to use OpenRecoveryScript to restore an encrypted backup.</string>
 		<string name="mounting">Mounting</string>
 		<string name="unmounting">Unmounting</string>
@@ -624,23 +622,23 @@
 		<string name="installing_zip">Installing zip file '{1}'</string>
 		<string name="select_backup_opt">Setting backup options:</string>
 		<string name="compression_on">Compression is on</string>
-		<string name="digest_off" version="2">Digest Generation is off</string>
+		<string name="md5_off">MD5 Generation is off</string>
 		<string name="backup_fail">Backup Failed</string>
 		<string name="backup_clean">Backup Failed. Cleaning Backup Folder.</string>
 		<string name="running_recovery_commands">Running Recovery Commands</string>
 		<string name="recovery_commands_complete">Recovery Commands Complete</string>
 		<string name="running_ors">Running OpenRecoveryScript</string>
 		<string name="ors_complete">OpenRecoveryScript Complete</string>
-		<string name="check_for_digest" version="2">Checking for Digest file...</string>
-		<string name="invalid_zip_format">Invalid zip file format!</string>
+		<string name="no_updater_binary">Could not find '{1}' in the zip file.</string>
+		<string name="check_for_md5">Checking for MD5 file...</string>
 		<string name="fail_sysmap">Failed to map file '{1}'</string>
 		<string name="verify_zip_sig">Verifying zip signature...</string>
 		<string name="verify_zip_fail">Zip signature verification failed!</string>
 		<string name="verify_zip_done">Zip signature verified successfully.</string>
 		<string name="zip_corrupt">Zip file is corrupt!</string>
-		<string name="no_digest" version="2">Skipping Digest check: no Digest file found</string>
-		<string name="digest_fail" version="2">Digest does not match</string>
-		<string name="digest_match" version="2">Digest matched</string>
+		<string name="no_md5">Skipping MD5 check: no MD5 file found</string>
+		<string name="md5_fail">MD5 does not match</string>
+		<string name="md5_match">MD5 matched</string>
 		<string name="pid_signal">{1} process ended with signal: {2}</string>
 		<string name="pid_error">{1} process ended with ERROR: {2}</string>
 		<string name="install_dumlock">Installing HTC Dumlock to system...</string>
@@ -673,19 +671,169 @@
 		<string name="curr_date">(Current Date)</string>
 		<string name="backup_name_len">Backup name is too long.</string>
 		<string name="backup_name_invalid">Backup name '{1}' contains invalid character: '{1}'</string>
-		<string name="no_real_sdcard">This device does not have a real SD card! Aborting!</string>
+		<string name="no_real_sdcard">This device does not have a real SD Card! Aborting!</string>
 		<string name="cancel_sideload">Cancelling ADB sideload...</string>
 		<string name="change_fs_err">Error changing file system.</string>
 		<string name="theme_ver_err">Custom theme version does not match TWRP version. Using stock theme.</string>
 		<string name="up_a_level">(Up A Level)</string>
-		<string name="install_reboot" version="2">Rebooting in %tw_sleep% second(s)</string>
-		<string name="adbbackup_error">Error with ADB Backup. Quitting..."</string>
-		<string name="adbbackup_control_error">Cannot write to adb control channel</string>
-		<string name="twrp_adbbu_option">--twrp option is required to enable twrp adb backup</string>
-		<string name="partition_not_found">path: {1} not found in partititon list</string>
-		<string name="copy_kernel_log">Copied kernel log to {1}</string>
+		<string name="install_reboot">Rebooting in 5 seconds</string>
+
+		<!-- Added some strings by Ayra Hikari -->
+		<string name="rb_edl_btn">EDL(9008)</string>
+		<string name="rb_disemmcwp_btn">Disemmcwp</string>
+		<string name="reset_battery_btn">Reset Battery</string>
+		<string name="reset_battery_hdr">Reset Battery</string>
+		<string name="reset_battery_note1">If you do not have a correct display of</string>
+		<string name="reset_battery_note2">the charge level you should do this.</string>
+		<string name="swipe_to_reset_battery">Swipe to Reset Battery</string>
+		<string name="resetting_battery">Resetting Battery...</string>
+		<string name="reset_battery_complete">Reset Battery Complete</string>
+		<string name="reset_vk_btn">Reset VK</string>
+		<string name="reset_vk_hdr">Reset VK</string>
+		<string name="reset_vk_note1">Are you sure to Reset the VK music counter?</string>
+		<string name="reset_vk_note2">Swipe to reset the VK music counter.</string>
+		<string name="swipe_to_reset_vk">Swipe to Reset VK</string>
+		<string name="resetting_vk">Resetting VK...</string>
+		<string name="reset_vk_complete">Reset VK Complete</string>
+		<string name="reset_dm_btn">No dm-verity</string>
+		<string name="reset_dm_hdr">No dm-verity</string>
+		<string name="reset_dm_note1">Are you sure to install No dm-verity?</string>
+		<string name="reset_dm_note2">Swipe to install No dm-verity.</string>
+		<string name="swipe_to_reset_dm">Swipe to No dm-verity</string>
+		<string name="resetting_dm">Insatlling No dm-verity...</string>
+		<string name="reset_dm_complete">No dm-verity Complete</string>
+		<string name="reset_aboot_btn">Del. inscription</string>
+		<string name="reset_aboot_hdr">Del. inscription</string>
+		<string name="reset_aboot_note1">Are you sure to Delete inscription bootloader?</string>
+		<string name="reset_aboot_note2">Swipe to Delete inscription bootloader.</string>
+		<string name="swipe_to_reset_aboot">Swipe to Delete</string>
+		<string name="resetting_aboot">Delete inscription...</string>
+		<string name="reset_aboot_complete">Delete inscription Complete</string>
+		<string name="reset_torch_btn">Torch</string>
+		<string name="reset_torch_hdr">Torch</string>
+		<string name="reset_torch_note1">Are you sure to Turn on torch?</string>
+		<string name="reset_torch_note2">Swipe to turn on.</string>
+		<string name="swipe_to_reset_torch">Swipe to Turn on</string>
+		<string name="resetting_torch">Turning on torch...</string>
+		<string name="reset_torch_complete">Turn on torch Complete</string>
+		<string name="reset_unroot_btn">Unroot</string>
+		<string name="reset_unroot_hdr">Unroot</string>
+		<string name="reset_unroot_note1">Are you sure to Unroot device?</string>
+		<string name="reset_unroot_note2">Swipe to unroot device.</string>
+		<string name="swipe_to_reset_unroot">Swipe to unroot</string>
+		<string name="resetting_unroot">Unrooting device...</string>
+		<string name="reset_unroot_complete">Unroot Complete</string>
+		<string name="root_btn">Root</string>
+		<string name="root_hdr">Root</string>
+		<string name="magisk_btn">Magisk</string>
+		<string name="magisk_text">Are you sure to Install Magisk 16.0?</string>
+		<string name="magisk_confirm">Swipte to install magisk.</string>
+		<string name="supersu_btn">SuperSU</string>
+		<string name="supersu_text">Are you sure to install SuperSU 2.82?</string>
+		<string name="supersu_confirm">Swipe to install supersu.</string>
+		<string name="unmagisk_btn">UnMagisk</string>
+		<string name="unmagisk_text">Are you sure to Uninstall Magisk?</string>
+		<string name="unmagisk_confirm">Swipe to uninstall magisk.</string>
+		<string name="unsupersu_btn">UnSuperSU</string>
+		<string name="unsupersu_text">Are you sure to uninstall SuperSU?</string>
+		<string name="unsupersu_confirm">Swipe to uninstall supersu.</string>
+		<string name="torch_hdr">Torch > On/Off</string>
+		<string name="ontorch_btn">On</string>
+		<string name="offtorch_btn">Off</string>
+		<string name="reset_torch2_hdr">Torch</string>
+		<string name="reset_torch2_note1">Are you sure to turning off torch?</string>
+		<string name="reset_torch2_note2">Swipe to turn off torch.</string>
+		<string name="swipe_to_reset_torch2">Swipe to turn off</string>
+		<string name="resetting_torch2">Turning off torch...</string>
+		<string name="reset_torch2_complete">Turn off torch Complete</string>
+		<string name="music">Sound</string>
+		<string name="music_hdr">Sound</string>
+		<string name="volume">Notification</string>
+		<string name="vol_text">Are you sure to Remove notification of</string>
+		<string name="vol_confirm">exceeding volume level on the stock firmware?</string>
+		<string name="aptx_btn">AptX</string>
+		<string name="aptx_text">Are you sure to Install a codec for better</string>
+		<string name="aptx_confirm">quality audio on Bluetooth devices?</string>
+		<string name="syst_btn">System</string>
+		<string name="syst_hdr">System changes</string>
+		<string name="nb_btn">On-screen buttons</string>
+		<string name="c2a_btn">Support Cam2API</string>
+		<string name="initd_btn">Support init.d</string>
+		<string name="initd_text">Will be added to boot and build.prop,</string>
+		<string name="initd_confirm">you need to install busybox for work</string>
+		<string name="nb_hdr">Navigation panel</string>
+		<string name="nb_text">Activate navigation bar</string>
+		<string name="nb_confirm">for stock firmware?</string>
+		<string name="nb2_text">Deactivate Navigation Bar</string>
+		<string name="ca_hdr">Support Cam2API</string>
+		<string name="ca_text">Activate Camera2API mode</string>
+		<string name="ca2_text">Deactivate Camera2API mode</string>
+		<string name="subs_btn">Substratum</string>
+		<string name="subs_hdr">Substratum</string>
+		<string name="delsubs_btn">Dis. Substratum</string>
+		<string name="delsubs_text">Are you sure to Disable substratum overlay?</string>
+		<string name="delsubs_confirm">Swipe to disable substratum overlays.</string>
+		<string name="legacysubs_btn">Alt. Dis. Subs.</string>
+		<string name="legacysubs_text">Are you sure to Disable substratum overlay?</string>
+
+		<!-- Fix some string not found -->
+		<string name="current_boot_slot">Current Slot: %tw_active_slot%</string>
+		<string name="boot_slot_a">Slot A</string>
+		<string name="boot_slot_b">Slot B</string>
+		<string name="reboot_install_app_hdr">Install TWRP App?</string>
+		<string name="reboot_install_app1">Would you like to install the Official TWRP App?</string>
+		<string name="reboot_install_app2">The app can check for new TWRP versions.</string>
+		<string name="reboot_install_app_prompt_install">Prompt to install TWRP app if not installed</string>
+		<string name="reboot_install_app_system">Install as a System App</string>
+		<string name="swipe_to_install_app">Swipe to Install TWRP App</string>
 		<string name="include_kernel_log">Include Kernel Log</string>
+		<string name="reset_lockscreen_btn">Reset Lockscreen</string>
+		<string name="reset_lockscreen_hdr">Reset Lockscreen</string>
+		<string name="reset_lockscreen_note1">If you cannot pass Lockscreen security</string>
+		<string name="reset_lockscreen_note2">after backup restore you should do this.</string>
+		<string name="swipe_to_reset_lockscreen">Swipe to Reset Lockscreen</string>
+		<string name="more_hdr">More</string>
+		<string name="xposed_en_btn">Enable Xposed</string>
+		<string name="xposed_en">Enabling xposed...</string>
+		<string name="xposed_en_complete">Xposed Enabled!</string>
+		<string name="xposed_dis">Disabling xposed...</string>
+		<string name="xposed_dis_complete">Xposed Disabled!</string>
+		<string name="xposed_dis_btn">Disable Xposed</string>
+		<string name="xposed_dis_note1">If you experience bootloop after Xposed Framework</string>
+		<string name="xposed_dis_note2">or Module install you should do this.</string>
+		<string name="xposed_en_note1">Is your Xposed Framework or Module</string>
+		<string name="xposed_en_note2">related bootloop issue fixed?</string>
+		<string name="swipe_to_dis_xposed">Swipe to Disable Xposed</string>
+		<string name="swipe_to_en_xposed">Swipe to Enable Xposed</string>
+		<string name="skip_digest">Skipping Digest check based on user setting.</string>
+		<string name="skip_digest_backup_chk" version="2">Skip Digest generation during backup</string>
+		<string name="restore_enable_digest_chk" version="2">Enable Digest Verification of Backup Files</string>
+		<string name="settings_screen_hdr">Screen and buttons</string>
+		<string name="screen_bright_slider">Screen brightness: %tw_brightness_pct%%</string>
+		<string name="buttons_bright_slider">Buttons brightness: %tw_btn_brightness_pct%%</string>
+		<string name="dis_navbar_chk">Disable navbar</string>
+		<string name="enbl_keys_chk">Enable device buttons</string>
 		<string name="sha2_chk">Use SHA2 for hashing</string>
-		<string name="unable_set_boot_slot">Error changing bootloader boot slot to {1}</string>
+		<string name="check_for_digest" version="2">Checking for Digest file...</string>
+		<string name="no_digest" version="2">Skipping Digest check: no Digest file found</string>
+		<string name="digest_fail" version="2">Digest does not match</string>
+		<string name="digest_match" version="2">Digest matched</string>
+		<string name="aroma_file_manager_btn">Aroma FM</string>
+		<string name="aroma_file_manager_conf1">Do you want to open Aroma File Manager?</string>
+		<string name="aroma_file_manager_conf2">Swipe to open Aroma FM</string>
+		<string name="aroma_file_manager_done">Done!</string>
+		<string name="about_text">About</string>
+		<string name="generating_digest1" version="2">Generating Digest</string>
+		<string name="generating_digest2" version="2"> * Generating digest...</string>
+		<string name="digest_created" version="2"> * Digest Created.</string>
+		<string name="digest_error" version="2"> * Digest Error!</string>
+		<string name="digest_compute_error" version="2"> * Error computing Digest.</string>
+		<string name="theme_hdr">Change theme</string>
+		<string name="theme_conf2">Swipe to Change</string>
+		<string name="theme_done">Changed!</string>
+		<string name="xposed_en">Enabling xposed...</string>
+		<string name="xposed_en_complete">Xposed Enabled!</string>
+		<string name="xposed_en">Disabling xposed...</string>
+		<string name="xposed_en_complete">Xposed Disabled!</string>
 	</resources>
 </language>
