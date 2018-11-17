@@ -20,13 +20,13 @@
 #define TW_MAIN_VERSION_STR       "3.2.3"
 #define TW_VERSION_STR TW_MAIN_VERSION_STR TW_DEVICE_VERSION
 
-#ifdef BR_OFFICIAL
+#ifdef NR_OFFICIAL
 #define TW_DEVICE_VERSION	   "OFFICIAL"
 #endif
 
 #define NR_BUILD                "1.0"
 #define NR_VERSION_VAR          "nr_version"
-#define NR_DEVICE               BR_DEVICE_MODEL
+#define NR_DEVICE               NR_DEVICE_MODEL
 #define NR_MAINTAINER_STR       "nr_maintainer"
 #define NR_ACTUAL_BUILD_VAR     "nr_actual_build"
 
@@ -106,6 +106,8 @@
 #define TW_REBOOT_RECOVERY          "tw_reboot_recovery"
 #define TW_REBOOT_POWEROFF          "tw_reboot_poweroff"
 #define TW_REBOOT_BOOTLOADER        "tw_reboot_bootloader"
+#define TW_REBOOT_EDL               "tw_reboot_edl"
+#define TW_REBOOT_DISEMMCWP         "tw_reboot_disemmcwp"
 
 #define TW_USE_EXTERNAL_STORAGE     "tw_use_external_storage"
 #define TW_HAS_INTERNAL             "tw_has_internal"
