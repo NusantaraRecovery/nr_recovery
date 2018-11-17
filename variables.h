@@ -20,6 +20,16 @@
 #define TW_MAIN_VERSION_STR       "3.2.3"
 #define TW_VERSION_STR TW_MAIN_VERSION_STR TW_DEVICE_VERSION
 
+#ifdef BR_OFFICIAL
+#define TW_DEVICE_VERSION	   "OFFICIAL"
+#endif
+
+#define NR_BUILD                "1.0"
+#define NR_VERSION_VAR          "nr_version"
+#define NR_DEVICE               BR_DEVICE_MODEL
+#define NR_MAINTAINER_STR       "nr_maintainer"
+#define NR_ACTUAL_BUILD_VAR     "nr_actual_build"
+
 #define TW_USE_COMPRESSION_VAR      "tw_use_compression"
 #define TW_FILENAME                 "tw_filename"
 #define TW_ZIP_INDEX                "tw_zip_index"
@@ -139,6 +149,13 @@
 #define TW_MILITARY_TIME            "tw_military_time"
 #define TW_USE_SHA2                 "tw_use_sha2"
 #define TW_NO_SHA2                  "tw_no_sha2"
+
+// Xposed
+#define TW_XPOSED                 "tw_xposed"
+#define TW_XPOSED_ENABLED         "tw_xposed_enabled"
+#define XPOSED_DATA_DIR           "/data/user_de/0/de.robv.android.xposed.installer"
+#define XPOSED_CONF_DIR           "/data/user_de/0/de.robv.android.xposed.installer/conf"
+#define XPOSED_DISABLE_FILE       "/data/user_de/0/de.robv.android.xposed.installer/conf/disabled"
 
 // Also used:
 //   tw_boot_is_mountable

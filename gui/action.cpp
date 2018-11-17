@@ -197,7 +197,6 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(checkpartitionlifetimewrites);
 		ADD_ACTION(mountsystemtoggle);
 		ADD_ACTION(setlanguage);
-		ADD_ACTION(checkforapp);
 		ADD_ACTION(togglebacklight);
 
 		// remember actions that run in the caller thread
@@ -230,6 +229,8 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(flashimage);
 		ADD_ACTION(twcmd);
 		ADD_ACTION(setbootslot);
+
+		// Nusantara Recovery
 		ADD_ACTION(resetlockscreen);
 		ADD_ACTION(resetbattery);
 		ADD_ACTION(resetvk);
@@ -242,7 +243,6 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(rebootedl);
 		ADD_ACTION(rebootdise);
 		ADD_ACTION(xposed);
-		ADD_ACTION(installapp);
 	}
 
 	// First, get the action
@@ -968,7 +968,7 @@ int GUIAction::screenshot(std::string arg __unused)
 	path_len = strlen(path);
 
 	// Screenshot_2014-01-01-18-21-38.png
-	strftime(path+path_len, sizeof(path)-path_len, "Screenshot_%Y-%m-%d-%H-%M-%S.png", localtime(&tm));
+	strftime(path+path_len, sizeof(path)-path_len, "Screenshot_NusantaraRecovery_%Y-%m-%d-%H-%M-%S.png", localtime(&tm));
 
 	int res = gr_save_screenshot(path);
 	if (res == 0) {
@@ -1904,67 +1904,6 @@ int GUIAction::setbootslot(std::string arg)
 	return 0;
 }
 
-int GUIAction::checkforapp(std::string arg __unused)
-{
-	operation_start("Check for TWRP App");
-	if (!simulate)
-	{
-		string sdkverstr = TWFunc::System_Property_Get("ro.build.version.sdk");
-		int sdkver = 0;
-		if (!sdkverstr.empty()) {
-			sdkver = atoi(sdkverstr.c_str());
-		}
-		if (sdkver <= 13) {
-			if (sdkver == 0)
-				LOGINFO("Unable to read sdk version from build prop\n");
-			else
-				LOGINFO("SDK version too low for TWRP app (%i < 14)\n", sdkver);
-			DataManager::SetValue("tw_app_install_status", 1); // 0 = no status, 1 = not installed, 2 = already installed or do not install
-			goto exit;
-		}
-		if (PartitionManager.Mount_By_Path("/system", false)) {
-			string base_path = "/system";
-			if (TWFunc::Path_Exists("/system/system"))
-				base_path += "/system"; // For devices with system as a root file system (e.g. Pixel)
-			string install_path = base_path + "/priv-app";
-			if (!TWFunc::Path_Exists(install_path))
-				install_path = base_path + "/app";
-			install_path += "/twrpapp";
-			if (TWFunc::Path_Exists(install_path)) {
-				LOGINFO("App found at '%s'\n", install_path.c_str());
-				DataManager::SetValue("tw_app_install_status", 2); // 0 = no status, 1 = not installed, 2 = already installed or do not install
-				goto exit;
-			}
-		}
-		if (PartitionManager.Mount_By_Path("/data", false)) {
-			const char parent_path[] = "/data/app";
-			const char app_prefix[] = "me.twrp.twrpapp-";
-			DIR *d = opendir(parent_path);
-			if (d) {
-				struct dirent *p;
-				while ((p = readdir(d))) {
-					if (p->d_type != DT_DIR || strlen(p->d_name) < strlen(app_prefix) || strncmp(p->d_name, app_prefix, strlen(app_prefix)))
-						continue;
-					closedir(d);
-					LOGINFO("App found at '%s/%s'\n", parent_path, p->d_name);
-					DataManager::SetValue("tw_app_install_status", 2); // 0 = no status, 1 = not installed, 2 = already installed or do not install
-					goto exit;
-				}
-				closedir(d);
-			}
-		} else {
-			LOGINFO("Data partition cannot be mounted during app check\n");
-			DataManager::SetValue("tw_app_install_status", 2); // 0 = no status, 1 = not installed, 2 = already installed or do not install
-		}
-	} else
-		simulate_progress_bar();
-	LOGINFO("App not installed\n");
-	DataManager::SetValue("tw_app_install_status", 1); // 0 = no status, 1 = not installed, 2 = already installed
-exit:
-	operation_end(0);
-	return 0;
-}
-
 int GUIAction::resetlockscreen(std::string arg __unused)
 {
 	int op_status = 0;
@@ -2192,100 +2131,4 @@ int GUIAction::xposed(std::string arg __unused)
 	else
 	       LOGINFO("Xposed action Success: result=%d\n", op_status);
 	return op_status;
-}
-
-int GUIAction::installapp(std::string arg __unused)
-{
-	int op_status = 1;
-	operation_start("Install TWRP App");
-	if (!simulate)
-	{
-		if (DataManager::GetIntValue("tw_mount_system_ro") > 0 || DataManager::GetIntValue("tw_app_install_system") == 0) {
-			if (PartitionManager.Mount_By_Path("/data", true)) {
-				string install_path = "/data/app";
-				string context = "u:object_r:apk_data_file:s0";
-				if (!TWFunc::Path_Exists(install_path)) {
-					if (mkdir(install_path.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH)) {
-						LOGERR("Error making %s directory: %s\n", install_path.c_str(), strerror(errno));
-						goto exit;
-					}
-					if (chown(install_path.c_str(), 1000, 1000)) {
-						LOGERR("chown %s error: %s\n", install_path.c_str(), strerror(errno));
-						goto exit;
-					}
-					if (setfilecon(install_path.c_str(), (security_context_t)context.c_str()) < 0) {
-						LOGERR("setfilecon %s error: %s\n", install_path.c_str(), strerror(errno));
-						goto exit;
-					}
-				}
-				install_path += "/me.twrp.twrpapp-1";
-				if (mkdir(install_path.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH)) {
-					LOGERR("Error making %s directory: %s\n", install_path.c_str(), strerror(errno));
-					goto exit;
-				}
-				if (chown(install_path.c_str(), 1000, 1000)) {
-					LOGERR("chown %s error: %s\n", install_path.c_str(), strerror(errno));
-					goto exit;
-				}
-				if (setfilecon(install_path.c_str(), (security_context_t)context.c_str()) < 0) {
-					LOGERR("setfilecon %s error: %s\n", install_path.c_str(), strerror(errno));
-					goto exit;
-				}
-				install_path += "/base.apk";
-				if (TWFunc::copy_file("/sbin/me.twrp.twrpapp.apk", install_path, 0644)) {
-					LOGERR("Error copying apk file\n");
-					goto exit;
-				}
-				if (chown(install_path.c_str(), 1000, 1000)) {
-					LOGERR("chown %s error: %s\n", install_path.c_str(), strerror(errno));
-					goto exit;
-				}
-				if (setfilecon(install_path.c_str(), (security_context_t)context.c_str()) < 0) {
-					LOGERR("setfilecon %s error: %s\n", install_path.c_str(), strerror(errno));
-					goto exit;
-				}
-				sync();
-				sync();
-			}
-		} else {
-			if (PartitionManager.Mount_By_Path("/system", true)) {
-				string base_path = "/system";
-				if (TWFunc::Path_Exists("/system/system"))
-					base_path += "/system"; // For devices with system as a root file system (e.g. Pixel)
-				string install_path = base_path + "/priv-app";
-				string context = "u:object_r:system_file:s0";
-				if (!TWFunc::Path_Exists(install_path))
-					install_path = base_path + "/app";
-				if (TWFunc::Path_Exists(install_path)) {
-					install_path += "/twrpapp";
-					LOGINFO("Installing app to '%s'\n", install_path.c_str());
-					if (mkdir(install_path.c_str(), S_IRWXU | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH) == 0) {
-						if (setfilecon(install_path.c_str(), (security_context_t)context.c_str()) < 0) {
-							LOGERR("setfilecon %s error: %s\n", install_path.c_str(), strerror(errno));
-							goto exit;
-						}
-						install_path += "/me.twrp.twrpapp.apk";
-						if (TWFunc::copy_file("/sbin/me.twrp.twrpapp.apk", install_path, 0644)) {
-							LOGERR("Error copying apk file\n");
-							goto exit;
-						}
-						if (setfilecon(install_path.c_str(), (security_context_t)context.c_str()) < 0) {
-							LOGERR("setfilecon %s error: %s\n", install_path.c_str(), strerror(errno));
-							goto exit;
-						}
-						sync();
-						sync();
-						PartitionManager.UnMount_By_Path("/system", true);
-						op_status = 0;
-					} else {
-						LOGERR("Error making app directory '%s': %s\n", strerror(errno));
-					}
-				}
-			}
-		}
-	} else
-		simulate_progress_bar();
-exit:
-	operation_end(0);
-	return 0;
 }
