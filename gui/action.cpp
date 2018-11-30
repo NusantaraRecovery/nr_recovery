@@ -186,6 +186,7 @@ GUIAction::GUIAction(xml_node<>* node)
 		ADD_ACTION(getpartitiondetails);
 		ADD_ACTION(screenshot);
 		ADD_ACTION(setbrightness);
+		ADD_ACTION(setbtnbrightness);
 		ADD_ACTION(fileexists);
 		ADD_ACTION(killterminal);
 		ADD_ACTION(checkbackupname);
@@ -991,6 +992,11 @@ int GUIAction::screenshot(std::string arg __unused)
 int GUIAction::setbrightness(std::string arg)
 {
 	return TWFunc::Set_Brightness(arg);
+}
+
+int GUIAction::setbtnbrightness(std::string arg)
+{
+	return TWFunc::Set_Btn_Brightness(arg);
 }
 
 int GUIAction::fileexists(std::string arg)

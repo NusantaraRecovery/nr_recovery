@@ -636,6 +636,20 @@ int TWFunc::tw_reboot(RebootCommand command)
 #else
 			return __reboot(LINUX_REBOOT_MAGIC1, LINUX_REBOOT_MAGIC2, LINUX_REBOOT_CMD_RESTART2, (void*) "bootloader");
 #endif
+		case rb_edl:
+			check_and_run_script("/sbin/rebootedl.sh", "reboot edl");
+#ifdef ANDROID_RB_PROPERTY
+			return property_set(ANDROID_RB_PROPERTY, "reboot,edl");
+#else
+			return __reboot(LINUX_REBOOT_MAGIC1, LINUX_REBOOT_MAGIC2, LINUX_REBOOT_CMD_RESTART2, (void*) "edl");
+#endif
+		case rb_disemmcwp:
+			check_and_run_script("/sbin/rebootdisemmcwp.sh", "reboot disemmcwp");
+#ifdef ANDROID_RB_PROPERTY
+			return property_set(ANDROID_RB_PROPERTY, "reboot,disemmcwp");
+#else
+			return __reboot(LINUX_REBOOT_MAGIC1, LINUX_REBOOT_MAGIC2, LINUX_REBOOT_CMD_RESTART2, (void*) "disemmcwp");
+#endif
 		case rb_poweroff:
 			check_and_run_script("/sbin/poweroff.sh", "power off");
 #ifdef ANDROID_RB_PROPERTY
@@ -1088,6 +1102,15 @@ int TWFunc::Set_Brightness(std::string brightness_value)
 			TWFunc::write_to_file(secondary_brightness_file, brightness_value);
 		}
 	}
+	return result;
+}
+
+int TWFunc::Set_Btn_Brightness(std::string btn_brightness_value)
+{
+	int result = -1;
+	std::string btn_brightness_file = "/sys/class/leds/button-backlight/brightness";
+	LOGINFO("TWFunc::Set_Btn_Brightness: Setting buttons brightness control to %s\n", btn_brightness_value.c_str());
+	result = TWFunc::write_to_file(btn_brightness_file, btn_brightness_value);
 	return result;
 }
 

@@ -22,6 +22,7 @@ extern "C" {
 #include "../twcommon.h"
 }
 #include "../minuitwrp/minui.h"
+#include "../twrp-functions.hpp"
 
 #include "rapidxml.hpp"
 #include "objects.hpp"
@@ -244,6 +245,16 @@ void GUIListBox::NotifySelect(size_t item_selected)
 		int selected = 1 - item.selected;
 		item.selected = selected;
 		DataManager::SetValue(item.variableName, selected ? "1" : "0");
+			if(item.variableName == "tw_disable_navbar")
+            		PageManager::RequestReload();
+            	if(item.variableName == "tw_enable_keys"){
+ 	    			if(item.selected){
+ 						TWFunc::Set_Btn_Brightness(DataManager::GetStrValue("tw_btn_brightness"));
+ 						PageManager::ChangePage("settings_screen");
+ 		    	}else{
+ 						TWFunc::Set_Btn_Brightness("0");
+ 		       }
+ 	        }
 	} else {
 		item.selected = 1;
 		string str = item.variableValue;	// [check] should this set currentValue instead?
@@ -252,4 +263,5 @@ void GUIListBox::NotifySelect(size_t item_selected)
 	if (item.action)
 		item.action->doActions();
 	mUpdate = 1;
+	DataManager::Flush();
 }

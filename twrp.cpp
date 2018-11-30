@@ -360,6 +360,14 @@ int main(int argc, char **argv) {
 	twrpAdbBuFifo *adb_bu_fifo = new twrpAdbBuFifo();
 	adb_bu_fifo->threadAdbBuFifo();
 
+	// Set xposed variables
+ 	TWFunc::Set_Xposed_Vars();
+ 	int i, e;
+ 	DataManager::GetValue(TW_XPOSED, i);
+ 	DataManager::GetValue(TW_XPOSED_ENABLED, e);
+ 	LOGINFO("Xposed: installed=%d, enabled=%d.\n", i, e);
+
+
 	// Launch the main GUI
 	gui_start();
 
@@ -381,6 +389,10 @@ int main(int argc, char **argv) {
 		TWFunc::tw_reboot(rb_poweroff);
 	else if (Reboot_Arg == "bootloader")
 		TWFunc::tw_reboot(rb_bootloader);
+	else if (Reboot_Arg == "edl")
+ 		TWFunc::tw_reboot(rb_edl);
+ 	else if (Reboot_Arg == "disemmcwp")
+ 		TWFunc::tw_reboot(rb_disemmcwp);
 	else if (Reboot_Arg == "download")
 		TWFunc::tw_reboot(rb_download);
 	else
