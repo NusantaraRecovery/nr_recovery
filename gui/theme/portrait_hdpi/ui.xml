@@ -33,6 +33,7 @@
 		<resource name="sidebar-erweitert" type="image" filename="sidebar-erweitert" />
 		<resource name="widgbutton" type="image" filename="widgbutton" />
 		<font name="button-text" filename="RobotoCondensed-Regular.ttf" size="35"/>
+		<font name="homeclock" filename="RobotoCondensed-Regular.ttf" size="250"/>
 		<resource name="punkt-hinter" type="image" filename="punkt-hinter" />
 		<resource name="neuhinter" type="image" filename="neuhinter" />
 		<resource name="recovery" type="image" filename="recovery" />
@@ -648,13 +649,13 @@
 				<placement x="485" y="0" />
 			</object>
 
-			<!--<object type="image">
+			<object type="image">
 				<image resource="cpu" />
 				<placement x="310" y="9" />
 			</object>-->
 			
 			<button style="main_button">
-				<placement x="39" y="955" />
+				<placement x="39" y="1465" />
 				<text>{@freiaktiverspeicher=test}</text>
 				<image resource="widgbutton" />
 				<font resource="font-widget-klein" color="#ffffff"/>
@@ -662,7 +663,7 @@
 			</button>
 			
 			<button style="main_button">
-				<placement x="39" y="982" />
+				<placement x="39" y="1492" />
 				<text>%tw_storage_free_size% MB {@frei=test}</text>
 				<image resource="widgbutton" />
 				<font resource="font-widget" color="#06fd06"/>
@@ -670,7 +671,7 @@
 			</button>
 			
 			<button style="main_button">
-				<placement x="39" y="1040" />
+				<placement x="39" y="1550" />
 				<text>{@cputemperatur=test}</text>
 				<image resource="widgbutton" />
 				<font resource="font-widget-klein" color="#ffffff"/>
@@ -678,7 +679,7 @@
 			</button>
 			
 			<button style="main_button">
-				<placement x="39" y="1066" />
+				<placement x="39" y="1577" />
 				<conditions>
 					<condition var1="tw_no_cpu_temp" var2="0" />
 				</conditions>

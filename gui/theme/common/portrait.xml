@@ -172,11 +172,17 @@
 		<page name="main2">
 			<template name="header-haupt"/>
 
+			<object type="text" color="#ffffff">
+				<font resource="homeclock" />
+				<placement x="%center_x%" y="200" placement="5" />
+				<text>%tw_time%</text>
+			</object>
+
 
 			<button style="main_button">
-				<placement x="10" y="180" />
+				<placement x="10" y="580" />
 				<text></text>
-				<image resource="button-installiere" />
+				<image resource="button-installiere"/>
 				<actions>
 					<action function="queueclear"/>
 					<action function="set">tw_selectimage=0</action>
@@ -185,7 +191,7 @@
 			</button>
 			
 			<button style="main_button">
-				<placement x="10" y="320" />
+				<placement x="10" y="720" />
 				<text>{@install_btn=Install}</text>
 				<image resource="button-bes" />
 				<font resource="button-text" color="%text_btn_color%"/>
@@ -203,14 +209,14 @@
 			</text>-->
 
 			<button style="main_button">
-				<placement x="280" y="180" />
+				<placement x="280" y="580" />
 				<text></text>
 				<image resource="button-sichern" />
 				<action function="page">backup</action>
 			</button>
 			
 			<button style="main_button">
-				<placement x="280" y="320" />
+				<placement x="280" y="720" />
 				<text>{@backup_btn=Backup}</text>
 				<image resource="button-bes" />
 				<font resource="button-text" color="%text_btn_color%"/>
@@ -218,14 +224,14 @@
 			</button>
 
 			<button style="main_button">
-				<placement x="550" y="180" />
+				<placement x="550" y="580" />
 				<text></text>
 				<image resource="button-wiederherstellen" />
 				<action function="page">restore</action>
 			</button>
 			
 			<button style="main_button">
-				<placement x="550" y="320" />
+				<placement x="550" y="720" />
 				<text>{@restore_btn=Restore}</text>
 				<image resource="button-bes" />
 				<font resource="button-text" color="%text_btn_color%"/>
@@ -233,14 +239,14 @@
 			</button>
 
 			<button style="main_button">
-				<placement x="820" y="180" />
+				<placement x="820" y="580" />
 				<text></text>
 				<image resource="button-loeschen" />
 				<action function="page">wipe</action>
 			</button>
 			
 			<button style="main_button">
-				<placement x="820" y="320" />
+				<placement x="820" y="720" />
 				<text>{@wipe_btn=Wipe}</text>
 				<image resource="button-bes" />
 				<font resource="button-text" color="%text_btn_color%"/>
@@ -248,14 +254,14 @@
 			</button>
 
 			<button style="main_button">
-				<placement x="10" y="580" />
+				<placement x="10" y="840" />
 				<text></text>
 				<image resource="button-einbinden" />
 				<action function="page">mount</action>
 			</button>
 			
 			<button style="main_button">
-				<placement x="10" y="720" />
+				<placement x="10" y="980" />
 				<text>{@mount_btn=Mount}</text>
 				<image resource="button-bes" />
 				<font resource="button-text" color="%text_btn_color%"/>
@@ -263,14 +269,14 @@
 			</button>
 
 			<button style="main_button">
-				<placement x="280" y="580" />
+				<placement x="280" y="840" />
 				<text></text>
 				<image resource="button-einstellungen" />
 				<action function="page">settings</action>
 			</button>
 			
 			<button style="main_button">
-				<placement x="280" y="720" />
+				<placement x="280" y="980" />
 				<text>{@settings_btn=Settings}</text>
 				<image resource="button-bes" />
 				<font resource="button-text" color="%text_btn_color%"/>
@@ -278,14 +284,14 @@
 			</button>
 
 			<button style="main_button">
-				<placement x="550" y="580" />
+				<placement x="550" y="840" />
 				<text></text>
 				<image resource="button-erweitert" />
 				<action function="page">advanced</action>
 			</button>
 			
 			<button style="main_button">
-				<placement x="550" y="720" />
+				<placement x="550" y="980" />
 				<text>{@advanced_btn=Advanced}</text>
 				<image resource="button-bes" />
 				<font resource="button-text" color="%text_btn_color%"/>
@@ -293,14 +299,14 @@
 			</button>
 
 			<button style="main_button">
-				<placement x="820" y="580" />
+				<placement x="820" y="840" />
 				<text></text>
 				<image resource="button-neustart" />
 				<action function="page">reboot</action>
 			</button>
 			
 			<button style="main_button">
-				<placement x="820" y="720" />
+				<placement x="820" y="980" />
 				<text>{@reboot_btn=Reboot}</text>
 				<image resource="button-bes" />
 				<font resource="button-text" color="%text_btn_color%"/>
@@ -308,14 +314,14 @@
 			</button>
 			
 			<button style="main_button">
-				<placement x="820" y="980" />
+				<placement x="820" y="1100" />
 				<text></text>
 				<image resource="button-dateimanager" />
 				<action function="page">filemanagerlist</action>
 			</button>
 			
 			<button style="main_button">
-				<placement x="820" y="1120" />
+				<placement x="820" y="1240" />
 				<text>{@file_manager_btn=File Manager}</text>
 				<image resource="button-bes" />
 				<font resource="button-text" color="%text_btn_color%"/>
@@ -323,14 +329,14 @@
 			</button>
 			
 			<button style="main_button">
-				<placement x="550" y="980" />
+				<placement x="550" y="1100" />
 				<text></text>
 				<image resource="button-afmanager" />
 				<action function="page">aromafm</action>
 			</button>
 
 			<button style="main_button">
-				<placement x="550" y="1120" />
+				<placement x="550" y="1240" />
 				<text>{@aroma_file_manager_btn=Aroma FM}</text>
 				<image resource="button-bes" />
 				<font resource="button-text" color="%text_btn_color%"/>
@@ -338,14 +344,14 @@
 			</button>
 
 			<button style="main_button">
-				<placement x="280" y="980" />
+				<placement x="280" y="1100" />
 				<text></text>
 				<image resource="button-about" />
 				<action function="page">ueber</action>
 			</button>
 
 			<button style="main_button">
-				<placement x="280" y="1120" />
+				<placement x="280" y="1240" />
 				<text>{@about_text=About}</text>
 				<image resource="button-bes" />
 				<font resource="button-text" color="%text_btn_color%"/>
