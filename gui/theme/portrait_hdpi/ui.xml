@@ -20,41 +20,41 @@
 		<resource name="lockclock" type="font" filename="Roboto-Medium.ttf" size="250" fallback="Roboto-Condensed-40" />
 		<resource name="font" type="font" filename="Roboto-Medium.ttf" size="40" fallback="Roboto-Condensed-40" />
 		<resource name="fontueberklein" type="font" filename="Roboto-Medium.ttf" size="25" fallback="Roboto-Condensed-40" />
-		<resource name="klappicon-insidebar-erweitert" type="image" filename="klappicon-insidebar-erweitert" />
-		<resource name="klappicon-outsidebar-erweitert" type="image" filename="klappicon-outsidebar-erweitert" />
-		<resource name="sperrkreis" type="image" filename="sperrkreis" />
-		<resource name="ueberlogo" type="image" filename="ueberlogo" />
+		<resource name="sidebar-menu-in" type="image" filename="sidebar-menu-in" />
+		<resource name="sidebar-menu-out" type="image" filename="sidebar-menu-out" />
+		<resource name="lingkaran" type="image" filename="lingkaran" />
+		<resource name="logotwrp" type="image" filename="logotwrp" />
 		<resource name="sidebar-header" type="font" filename="Roboto-Medium.ttf" size="72" fallback="Roboto-Condensed-40" />
 		<resource name="font-reboot" type="font" filename="Roboto-Medium.ttf" size="48" fallback="Roboto-Condensed-40" />
-		<resource name="font-punktmenue" type="font" filename="Roboto-Medium.ttf" size="36" fallback="Roboto-Condensed-40" />
+		<resource name="font-menu" type="font" filename="Roboto-Medium.ttf" size="36" fallback="Roboto-Condensed-40" />
 		<resource name="widget" type="image" filename="widget" />
-		<resource name="warnung" type="image" filename="warnung" />
-		<resource name="side-menue" type="image" filename="side-menue" />
-		<resource name="sidebar-erweitert" type="image" filename="sidebar-erweitert" />
+		<resource name="warning" type="image" filename="warning" />
+		<resource name="side-menu" type="image" filename="side-menu" />
+		<resource name="sidebar-menu" type="image" filename="sidebar-menu" />
 		<resource name="widgbutton" type="image" filename="widgbutton" />
 		<font name="button-text" filename="RobotoCondensed-Regular.ttf" size="35"/>
 		<font name="homeclock" filename="RobotoCondensed-Regular.ttf" size="250"/>
-		<resource name="punkt-hinter" type="image" filename="punkt-hinter" />
-		<resource name="neuhinter" type="image" filename="neuhinter" />
+		<resource name="menu-bg" type="image" filename="menu-bg" />
+		<resource name="advreboot" type="image" filename="advreboot" />
 		<resource name="recovery" type="image" filename="recovery" />
 		<resource name="reboot-trans" type="image" filename="reboot-trans" />
-		<resource name="punktmenue-trans" type="image" filename="punktmenue-trans" />
+		<resource name="sidebar-menu-trans" type="image" filename="sidebar-menu-trans" />
 		<resource name="bootloader" type="image" filename="bootloader" />
 		<resource name="download" type="image" filename="download" />
 		<resource name="edl" type="image" filename="edl" />
-		<resource name="base-haupt" type="image" filename="background2" />
+		<resource name="latarbelakang" type="image" filename="background2" />
 		<resource name="button-bes" type="image" filename="button-bes" />
-		<resource name="punkte" type="image" filename="punkte" />
-		<resource name="punkte-kon" type="image" filename="punkte-kon" />
-		<resource name="button-einbinden" type="image" filename="button-einbinden" />
-		<resource name="button-einstellungen" type="image" filename="button-einstellungen" />
-		<resource name="button-erweitert" type="image" filename="button-erweitert" />
-		<resource name="button-installiere" type="image" filename="button-installiere" />
-		<resource name="button-loeschen" type="image" filename="button-loeschen" />
-		<resource name="button-neustart" type="image" filename="button-neustart" />
-		<resource name="button-sichern" type="image" filename="button-sichern" />
-		<resource name="button-wiederherstellen" type="image" filename="button-wiederherstellen" />
-		<resource name="button-dateimanager" type="image" filename="button-dateimanager" />
+		<resource name="menu" type="image" filename="menu" />
+		<resource name="menu-kon" type="image" filename="menu-kon" />
+		<resource name="button-mount" type="image" filename="button-mount" />
+		<resource name="button-settings" type="image" filename="button-settings" />
+		<resource name="button-advanced" type="image" filename="button-advanced" />
+		<resource name="button-install" type="image" filename="button-install" />
+		<resource name="button-wipe" type="image" filename="button-wipe" />
+		<resource name="button-reboot" type="image" filename="button-reboot" />
+		<resource name="button-backup" type="image" filename="button-backup" />
+		<resource name="button-restore" type="image" filename="button-restore" />
+		<resource name="button-filemanager" type="image" filename="button-filemanager" />
 		<resource name="button-afmanager" type="image" filename="button-afmanager" />
 		<resource name="button-about" type="image" filename="button-about" />
 		<resource name="regfuebild" type="image" filename="regfuebild" />
@@ -325,7 +325,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -497,7 +497,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -608,7 +608,7 @@
 			<background color="#000000FF" />
 			
 			<object type="image">
-				<image resource="base-haupt" />
+				<image resource="latarbelakang" />
 				<placement x="0" y="0" />
 			</object>
 

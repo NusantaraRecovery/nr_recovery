@@ -182,7 +182,7 @@
 			<button style="main_button">
 				<placement x="10" y="580" />
 				<text></text>
-				<image resource="button-installiere"/>
+				<image resource="button-install"/>
 				<actions>
 					<action function="queueclear"/>
 					<action function="set">tw_selectimage=0</action>
@@ -211,7 +211,7 @@
 			<button style="main_button">
 				<placement x="280" y="580" />
 				<text></text>
-				<image resource="button-sichern" />
+				<image resource="button-backup" />
 				<action function="page">backup</action>
 			</button>
 			
@@ -226,7 +226,7 @@
 			<button style="main_button">
 				<placement x="550" y="580" />
 				<text></text>
-				<image resource="button-wiederherstellen" />
+				<image resource="button-restore" />
 				<action function="page">restore</action>
 			</button>
 			
@@ -241,7 +241,7 @@
 			<button style="main_button">
 				<placement x="820" y="580" />
 				<text></text>
-				<image resource="button-loeschen" />
+				<image resource="button-wipe" />
 				<action function="page">wipe</action>
 			</button>
 			
@@ -256,7 +256,7 @@
 			<button style="main_button">
 				<placement x="10" y="840" />
 				<text></text>
-				<image resource="button-einbinden" />
+				<image resource="button-mount" />
 				<action function="page">mount</action>
 			</button>
 			
@@ -271,7 +271,7 @@
 			<button style="main_button">
 				<placement x="280" y="840" />
 				<text></text>
-				<image resource="button-einstellungen" />
+				<image resource="button-settings" />
 				<action function="page">settings</action>
 			</button>
 			
@@ -286,7 +286,7 @@
 			<button style="main_button">
 				<placement x="550" y="840" />
 				<text></text>
-				<image resource="button-erweitert" />
+				<image resource="button-advanced" />
 				<action function="page">advanced</action>
 			</button>
 			
@@ -301,7 +301,7 @@
 			<button style="main_button">
 				<placement x="820" y="840" />
 				<text></text>
-				<image resource="button-neustart" />
+				<image resource="button-reboot" />
 				<action function="page">reboot</action>
 			</button>
 			
@@ -316,7 +316,7 @@
 			<button style="main_button">
 				<placement x="820" y="1100" />
 				<text></text>
-				<image resource="button-dateimanager" />
+				<image resource="button-filemanager" />
 				<action function="page">filemanagerlist</action>
 			</button>
 			
@@ -372,7 +372,7 @@
 		<page name="reboot">
 			
 			<object type="image">
-				<image resource="neuhinter" />
+				<image resource="advreboot" />
 				<placement x="0" y="0" />
 			</object>
 			
@@ -744,7 +744,7 @@
 		<page name="punkt-menue">
 			
 			<object type="image">
-				<image resource="punkt-hinter" />
+				<image resource="menu-bg" />
 				<placement x="0" y="0" />
 			</object>
 			
@@ -754,7 +754,7 @@
 			</object>
 			
 			<object type="text" color="#090909">
-				<font resource="font-punktmenue" />
+				<font resource="font-menu" />
 				<placement x="564" y="105" />
 				<text>{@settings_btn=Settings}</text>
 			</object>
@@ -762,14 +762,14 @@
 			<object type="button">
 				<placement x="520" y="96" />
 				<text></text>
-				<image resource="punktmenue-trans" />
+				<image resource="sidebar-menu-trans" />
 				<action function="page">settings</action>
 				<action function="overlay"></action>
 			</object>
 			
 			
 			<object type="text" color="#090909">
-				<font resource="font-punktmenue" />
+				<font resource="font-menu" />
 				<placement x="564" y="189" />
 				<text>{@advanced_btn=Advanced}</text>
 			</object>
@@ -778,7 +778,7 @@
 			<object type="button">
 				<placement x="520" y="181" />
 				<text></text>
-				<image resource="punktmenue-trans" />
+				<image resource="sidebar-menu-trans" />
 				<action function="page">advanced</action>
 				<action function="overlay"></action>
 			</object>
@@ -786,7 +786,7 @@
 			
 			
 			<object type="text" color="#090909">
-				<font resource="font-punktmenue" />
+				<font resource="font-menu" />
 				<placement x="564" y="273" />
 				<text>{@ueber=test}</text>
 			</object>
@@ -794,7 +794,7 @@
 			<object type="button">
 				<placement x="520" y="265" />
 				<text></text>
-				<image resource="punktmenue-trans" />
+				<image resource="sidebar-menu-trans" />
 				<action function="page">ueber</action>
 				<action function="overlay"></action>
 			</object>
@@ -1055,7 +1055,7 @@
 		-->
 			
 			<object type="image">
-				<image resource="ueberlogo" />
+				<image resource="logotwrp" />
 				<placement x="464" y="165" />
 			</object>
 			
@@ -2649,7 +2649,7 @@
 			</button>
 
 			<object type="image">
-				<image resource="warnung" />
+				<image resource="warning" />
 				<placement x="444" y="1050" />
 			</object>
 
@@ -6699,8 +6699,8 @@
 			<object type="button">
 				<placement x="0" y="70" />
 				<text></text>
-				<image resource="klappicon-outsidebar-erweitert" />
-				<action function="overlay">sidebar-erweitert</action>
+				<image resource="sidebar-menu-out" />
+				<action function="overlay">sidebar-menu</action>
 			</object>
 
 			<action>
@@ -7785,14 +7785,14 @@
 		</page>
 	<!-- end of page features -->
 
-		<page name="sidebar-erweitert">
+		<page name="sidebar-menu">
 		
 		<fill color="#8bc34b">
 				<placement x="0" y="72" w="912" h="1848"/>
 			</fill>
 			
 			<object type="image">
-				<image resource="sidebar-erweitert" />
+				<image resource="sidebar-menu" />
 				<placement x="0" y="72" />
 			</object>
 			
@@ -7856,7 +7856,7 @@
 			<object type="button">
 				<placement x="120" y="639" />
 				<text></text>
-				<image resource="side-menue" />
+				<image resource="side-menu" />
 				<actions>
 					<action function="page">copylog</action>
 					<action function="overlay"></action>
@@ -7866,7 +7866,7 @@
 			<object type="button">
 				<placement x="120" y="777" />
 				<text></text>
-				<image resource="side-menue" />
+				<image resource="side-menu" />
 				<action function="page">fixcontexts</action>
 				<action function="overlay"></action>
 			</object>
@@ -7874,7 +7874,7 @@
 			<object type="button">
 				<placement x="120" y="914" />
 				<text></text>
-				<image resource="side-menue" />
+				<image resource="side-menu" />
 				<action function="page">terminalcommand</action>
 				<action function="overlay"></action>
 			</object>
@@ -7882,7 +7882,7 @@
 			<object type="button">
 				<placement x="120" y="1051" />
 				<text></text>
-				<image resource="side-menue" />
+				<image resource="side-menu" />
 				<action function="reload"></action>
 				<action function="overlay"></action>
 
@@ -7891,7 +7891,7 @@
 			<object type="button">
 				<placement x="120" y="1188" />
 				<text></text>
-				<image resource="side-menue" />
+				<image resource="side-menu" />
 				<action function="page">sideload</action>
 				<action function="overlay"></action>
 			</object>
@@ -7900,7 +7900,7 @@
 				<condition var1="tw_show_dumlock" var2="1" />
 				<placement x="120" y="1325" />
 				<text></text>
-				<image resource="side-menue" />
+				<image resource="side-menu" />
 				<action function="page">htcdumlock</action>
 				<action function="overlay"></action>
 			</object>
@@ -7909,7 +7909,7 @@
 				<condition var1="tw_has_injecttwrp" var2="1" />
 				<placement x="120" y="1462" />
 				<text></text>
-				<image resource="side-menue" />
+				<image resource="side-menu" />
 				<actions>
 					<action function="set">tw_back=advanced</action>
 					<action function="set">tw_action=reinjecttwrp</action>
@@ -7926,7 +7926,7 @@
 				<condition var1="tw_allow_partition_sdcard" var2="1" />
 				<placement x="120" y="1599" />
 				<text></text>
-				<image resource="side-menue" />
+				<image resource="side-menu" />
 				<actions>
 					<action function="set">partitionlisterror=0</action>
 					<action function="page">partsdcardsel</action>
@@ -7950,7 +7950,7 @@
 			<object type="button">
 				<placement x="0" y="70" />
 				<text></text>
-				<image resource="klappicon-insidebar-erweitert" />
+				<image resource="sidebar-menu-in" />
 				<action function="overlay"></action>
 			</object>
 			
@@ -8425,7 +8425,7 @@
 			</fill>
 			
 			<object type="image">
-				<image resource="sperrkreis" />
+				<image resource="lingkaran" />
 				<placement x="50" y="764" />
 			</object>
 			
