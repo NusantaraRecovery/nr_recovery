@@ -622,7 +622,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -884,7 +884,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="1"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -1095,7 +1095,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -1265,7 +1265,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -1435,7 +1435,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -1527,7 +1527,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -1674,7 +1674,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -1791,7 +1791,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -1971,7 +1971,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -2097,7 +2097,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -2213,7 +2213,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -2322,7 +2322,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -2512,7 +2512,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -2704,7 +2704,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -2836,7 +2836,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -3012,7 +3012,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -3225,7 +3225,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -3452,7 +3452,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -3636,7 +3636,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -3830,7 +3830,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -4015,7 +4015,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -4192,7 +4192,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -4381,7 +4381,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -4515,7 +4515,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -4653,7 +4653,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -4802,7 +4802,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -4915,7 +4915,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -5068,7 +5068,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -5211,7 +5211,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -5322,7 +5322,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -5486,7 +5486,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -5704,7 +5704,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -5924,7 +5924,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -6105,7 +6105,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -6261,7 +6261,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -6384,7 +6384,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -6496,7 +6496,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -6591,7 +6591,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -8118,7 +8118,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -8306,7 +8306,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -9186,7 +9186,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -9390,7 +9390,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -9510,7 +9510,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
@@ -9631,7 +9631,7 @@
 			<object type="button">
 				<condition var1="tw_busy" var2="0"/>
 				<text></text>
-				<image resource="punkte" />
+				<image resource="menu" />
 				<placement x="972" y="117"/>
 				<action function="overlay">punkt-menue</action>
 			</object>
