@@ -961,7 +961,7 @@
 			<object type="text" color="%text_color%">
 				<font resource="font" />
 				<placement x="100" y="650" />
-				<text>Using theme</text>
+				<text>Version</text>
 			</object>
 			
 			
@@ -1000,44 +1000,14 @@
 			<object type="text" color="%text_color%">
 				<font resource="font" />
 				<placement x="100" y="1200" />
-				<text>Special thanks to :</text>
+				<text>TWRP Status</text>
 			</object>
 			
 			
 			<object type="text" color="%text_color%">
 				<font resource="fontueberklein" />
 				<placement x="100" y="1250" />
-				<text>NFound - For some tools</text>
-			</object>
-			
-			<object type="text" color="%text_color%">
-				<font resource="fontueberklein" />
-				<placement x="100" y="1285" />
-				<text>tilo140380 - For greats Theme</text>
-			</object>
-			
-			<object type="text" color="%text_color%">
-				<font resource="fontueberklein" />
-				<placement x="100" y="1320" />
-				<text>Pasakalis George</text>
-			</object>
-			
-			<object type="text" color="%text_color%">
-				<font resource="fontueberklein" />
-				<placement x="100" y="1355" />
-				<text>Official twrp.me</text>
-			</object>
-			
-			<object type="text" color="%text_color%">
-				<font resource="fontueberklein" />
-				<placement x="100" y="1390" />
-				<text>Wallpaper - zedge.net/zCode: 9793049</text>
-			</object>
-			
-			<object type="text" color="%text_color%">
-				<font resource="fontueberklein" />
-				<placement x="100" y="1425" />
-				<text>And others that I can not mention</text>
+				<text>Version %nr_version% - Build by %nr_maintainer%</text>
 			</object>
 			
 		<!--

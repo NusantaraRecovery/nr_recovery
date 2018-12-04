@@ -2,9 +2,9 @@
 <recovery>
 	<details>
 		<resolution width="1080" height="1920"/>
-		<author>tilo140380</author>
-		<title>deutsches Theme Material Dark V2.11 für S4</title>
-		<description>Dies ist ein deutscher Style für TWRP 3.1.1</description>
+		<author>Ayra Hikari</author>
+		<title>Nusantara Recovery</title>
+		<description>Theme of Nusantara Recovery</description>
 		<preview>preview.png</preview>
 		<themeversion>3</themeversion>
 	</details>
@@ -122,11 +122,10 @@
 	</resources>
 
 	<variables>
-		<variable name="twrpname" value="TWRP Hikari v2.4" />
+		<variable name="twrpname" value="Nusantara Recovery" />
 		<variable name="twrpauthor" value="Created by Ayra Hikari" />
-		<variable name="twrpversion" value="Theme Material Dark By tilo140380" />
-		<variable name="twrpbuild" value="04 July 2018" />
-		<variable name="twrpversion" value="Version 2.3" />
+		<variable name="twrpbuild" value="04 December 2018" />
+		<variable name="twrpversion" value="Version 1.0" />
 		<variable name="tw_samsung_navbar" value="0" persist="1"/>
 		<variable name="accent_color_tilo" value="#2e1334"/>
 		<variable name="accent_color_tilo_install" value="#69bcf0"/>
