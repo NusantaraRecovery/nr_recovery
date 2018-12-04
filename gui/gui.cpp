@@ -212,28 +212,28 @@ bool InputHandler::processInput(int timeout_ms)
 						   PageManager::NotifyKey(KEY_BACK, true);
 				 DataManager::Vibrate("tw_button_vibrate");
 			}else{
-					switch (ev.code)
-					{
-						case KEY_MENU:
-							if(DataManager::GetIntValue("tw_busy") == 0)
-								gui_changeOverlay(DataManager::GetStrValue("tw_menu_key"));
-							break;
-						case KEY_HOME:
-							if(DataManager::GetStrValue("tw_menu_key") != "")
-								PageManager::NotifyKey(KEY_HOMEPAGE, false);
-							else
-								gui_changeOverlay("");
-							break;
-						case KEY_BACK:
-							if(DataManager::GetStrValue("tw_menu_key") != "")
-								PageManager::NotifyKey(KEY_BACK, false);
-							else
-								gui_changeOverlay("");
-							break;
-					}
+				switch (ev.code)
+				{
+					case KEY_MENU:
+						if(DataManager::GetIntValue("tw_busy") == 0)
+							gui_changeOverlay(DataManager::GetStrValue("tw_menu_key"));
+						break;
+					case KEY_HOME:
+						if(DataManager::GetStrValue("tw_menu_key") != "")
+							PageManager::NotifyKey(KEY_HOMEPAGE, false);
+						else
+							gui_changeOverlay("");
+						break;
+					case KEY_BACK:
+						if(DataManager::GetStrValue("tw_menu_key") != "")
+							PageManager::NotifyKey(KEY_BACK, false);
+						else
+							gui_changeOverlay("");
+						break;
 				}
-			}else if(ev.code != KEY_BACK){
-			process_EV_KEY(ev);
+			}
+		}else if(ev.code != KEY_BACK){
+				process_EV_KEY(ev);
 		}
 		break;
 	}
@@ -705,6 +705,10 @@ int gui_changePage(std::string newPage)
 int gui_changeOverlay(std::string overlay)
 {
 	LOGINFO("Set overlay: '%s'\n", overlay.c_str());
+	if(overlay != "slideout")
+ 	    DataManager::SetValue("tw_menu_key", "slideout");
+ 	else
+ 	    DataManager::SetValue("tw_menu_key", "");
 	PageManager::ChangeOverlay(overlay);
 	gForceRender.set_value(1);
 	return 0;
@@ -780,6 +784,8 @@ extern "C" int gui_init(void)
 {
 	gr_init();
 	TWFunc::Set_Brightness(DataManager::GetStrValue("tw_brightness"));
+	if(DataManager::GetIntValue("tw_enable_keys"))
+ 		TWFunc::Set_Btn_Brightness(DataManager::GetStrValue("tw_btn_brightness"));
 
 	// load and show splash screen
 	if (PageManager::LoadPackage("splash", TWRES "splash.xml", "splash")) {
